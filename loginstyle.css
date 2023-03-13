@@ -1,0 +1,131 @@
+.loginpage{
+    width: 100vw;
+    height: 100vh;
+    
+    background: linear-gradient(rgba(172, 172, 172, 0.3),rgba(172, 172, 172, 0.3)), url('./assets/loginpageImage.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    border: 0.001px solid rgb(255, 255, 255);
+    
+}
+.mainbox{
+    width: 30vw;
+    height: 35vw;
+    margin-top: 20vh;  
+    margin-left: 35vw;
+    /* border: 2px solid black; */
+    text-align: center;
+    border-radius: 20px;
+    background-color: white;
+    opacity: 0.85;
+    
+    
+}
+.mainbox h1{
+    font-weight: 300;
+    font-size: 2vw;
+    padding-top: 5vh;
+    /* padding-bottom: 0;
+    margin-bottom: 0; */
+
+
+}
+.mainbox input{
+    width: 17.5vw;
+    height: 4vh;
+    margin: 1.4vh 0;
+    border-radius: 25px;
+    border: solid black;
+    
+}
+.mainbox input[type="text"]{
+    padding-left: 1vw;
+}
+.mainbox input[type="password"]{
+    padding-left: 1vw;
+}
+/* .mainbox input[type="password"]{
+    margin-bottom: 100px;
+} */
+.forgot{
+    border: 0;
+    background-color: white;
+    width: 17.5vw;
+    text-align: left !important;
+    margin-bottom: 2vh;
+    padding-left: 0.5vw;
+
+}
+.forgot:hover{
+    color: green ;
+}
+.mainbox input[type="submit"]{
+    background-color: green;
+    color: white;
+    border: 0;
+    /* padding-left: 1vw; */
+    /* padding-top: 10px; */
+    margin-bottom: 3vh;
+    cursor: pointer;
+
+}
+.mainbox input[type="submit"]:hover{
+    background-color: rgb(1, 95, 1);
+}
+/* .mainbox p{
+    font-size: 1.5vw;
+    font-weight: 200;
+} */
+.mainbox .signinwith {
+    font-size: 1vw;
+    margin-bottom: 4vh;
+}
+.otheroptions{
+    display: flex;
+    justify-content: space-evenly;
+}
+.otheroptions a{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    /* vertical-align: middle; */
+    margin-left: 3px;
+    
+    font-size: 0.8vw;
+}
+.otheroptions i{
+    /* display: inline-block; */
+    vertical-align: middle;
+    padding-bottom: 5px;
+}
+.otheroptions a:hover{
+    color: green;
+}
+
+     /* -------------------  responsive login page  ----------------  */
+
+@media (max-width: 1439x){
+    .mainbox{
+        width: 60vw;
+        margin-left: 20vw;
+
+    }
+    .mainbox input{
+        width: 25vw;
+    }
+}
+@media (max-width: 1080px){
+    .mainbox{
+        width: 90vw;
+        height: 80vh;
+        margin-top: 10vh;
+        margin-left: 5vw;
+
+    }
+    .mainbox input{
+        width: 40vw;
+        height: 4vh;
+    }
+}
