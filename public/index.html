@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/edce2ef283.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="loginstyle.css">
+    <title>City Chalo!</title>
+</head>
+<body>
+    
+    <div class="loginpage">
+        <div class="mainbox">
+            <h1>Login</h1>
+            <!-- <p>Hello Again!</p> -->
+            <form action="">
+                <input class="username" id="username"  type="text" placeholder="Email" required> <br>
+                <input class="password" id="password" type="password" placeholder="Password" required><br>
+                <button class="forgot">Forgot password?</button> <br>
+                <input type="submit" id="signup" value="Sign in
+                ">
+            </form>
+            <p class="signinwith">-----  Or Sign in with  -----</p>
+
+            <div class="otheroptions">
+                <div class="google">
+                    <i class="fa-brands fa-google fa-2x"></i>
+                    <a href="https://accounts.google.com/signin/v2/identifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin">Google</a>
+                </div>
+                <div class="apple">
+                    <i class="fa-brands fa-apple fa-2x"></i>
+                    <a href="https://www.icloud.com/?q=/">Apple Id</a>
+                </div>
+                <div class="facebook">
+                    <i class="fa-brands fa-facebook fa-2x"></i>
+                    <a href="https://www.facebook.com/login/" >Facebook</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="./loginpage.js"></script>
+</body>
+<script type="module">
+
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-analytics.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-Auth.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyC7b59g8Wu_nUaE-lnq49-uQWUj5QZdxsQ",
+      authDomain: "busticketbookingwebsite-login.firebaseapp.com",
+      databaseURL: "https://busticketbookingwebsite-login-default-rtdb.firebaseio.com",
+      projectId: "busticketbookingwebsite-login",
+      storageBucket: "busticketbookingwebsite-login.appspot.com",
+      messagingSenderId: "800711449776",
+      appId: "1:800711449776:web:5b98a69b83f4af18e22f75",
+      measurementId: "G-NJ3BGVYPBV"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const auth = getAuth();
+signup.addEventListener('click', (e)=> {
+
+var email = document.getElementById('username').value;
+var password = document.getElementById('password').value;
+
+    
+    createUserWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    // ...
+    alert('user created');
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // ..
+    alter('error message');
+  });
+
+});
+  </script>
+</html>
