@@ -12,7 +12,7 @@
 }
 .mainbox{
     width: 30vw;
-    height: 35vw;
+    height: 55vh;
     margin-top: 20vh;  
     margin-left: 35vw;
     /* border: 2px solid black; */
@@ -110,7 +110,7 @@
     .mainbox{
         width: 60vw;
         margin-left: 20vw;
-
+        height: 60vh;
     }
     .mainbox input{
         width: 25vw;
@@ -118,11 +118,15 @@
 }
 @media (max-width: 1080px){
     .mainbox{
-        width: 90vw;
-        height: 80vh;
-        margin-top: 10vh;
-        margin-left: 5vw;
+        width: 60vw;
+        height: 60vh;
+        margin-top: 20vh;
+        margin-left: 20vw;
+        
 
+    }
+    .otheroptions a .signinwith{
+        font-size: 15px;
     }
     .mainbox input{
         width: 40vw;
